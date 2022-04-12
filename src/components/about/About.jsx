@@ -1,6 +1,6 @@
-import React from 'react'
-import './About.css'
 import JessePiper from "../../img/JessePiper.png"
+import Trophy from "../../img/Trophy.jpeg"
+import './About.css'
 
 const About = () => {
   return (
@@ -30,6 +30,17 @@ const About = () => {
                human proportions. He has a gleaming bronze-like metallic 
                surface of an Art Deco design. 
             </p>
+            <div className="about-award">
+                <img src={Trophy} alt="" className="award-image" />
+                <div className="about-award-text">
+                    <h4 className="about-award-title">Game of Pwns Championship Trophy</h4>
+                        <p className="about-award-description">
+                        3x winner of Fantasy Football's most prestigious award, celebrating
+                        the accomplishments of my ownership of the most successful dynasty 
+                        club in the storied history of our league.
+                        </p>                    
+                </div>
+            </div>
         </div>
     </div>
   )

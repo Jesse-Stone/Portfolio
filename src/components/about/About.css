@@ -45,3 +45,28 @@
     font-weight: 100;
     font-size: 30px
 }
+
+.award-image {
+    height: 310px;
+    width: 310px;
+    border-radius: 25px;
+}
+
+.about-award {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-award-text {
+    width: 80%;
+    margin-right: 30%;
+    margin-left: 40px;
+    font-weight: 300;
+}
+
+.about-award-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
