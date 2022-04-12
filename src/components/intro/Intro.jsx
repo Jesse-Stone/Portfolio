@@ -14,12 +14,26 @@ const Intro = () => {
                             <div className="intro-title-item">Web Developer</div>
                             <div className="intro-title-item">Data Scientist</div>
                             <div className="intro-title-item">Musician</div>
-                            <div className="intro-title-item">Doodie Fan</div>
-                            <div className="intro-title-item">Peepee lover</div>
+                            <div className="intro-title-item">Builder</div>
+                            <div className="intro-title-item">Gamer</div>
                         </div>
                     </div>
                     <p className="intro-description">                       
-                        I design poop with a hint of pee and sometimes ca ca. As well as colorful doodies, stinkies, farties, and dumpies.
+                    A long time ago, in a galaxy far, far, away...
+
+               A vast sea of stars serves as the backdrop for the main title. 
+               War drums echo through the heavens as a rollup slowly crawls 
+               into infinity.
+
+                    It is a period of civil war. Rebel spaceships, 
+                    striking from a hidden base, have won their first 
+                    victory against the evil Galactic Empire.
+
+                    During the battle, Rebel spies managed to steal 
+                    secret plans to the Empire's ultimate weapon, the 
+                    Death Star, an armored space station with enough 
+                    power to destroy an entire planet.   
+                    
                     </p>
                 </div>
                 <img src={MouseIcon} alt="" className="intro-scroll" />                
