@@ -24,12 +24,12 @@
 }
 
 .intro-intro {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 300;
 }
 
 .intro-name {
-    font-size: 60px;
+    font-size: 50px;
 }
 
 .intro-title {
@@ -59,7 +59,7 @@
 
 .intro-title-item {
     height: 50px;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     color: rgb(18, 71, 124);
     display: flex;
@@ -67,7 +67,7 @@
 }
 
 .intro-description {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 100;
 }
 
@@ -85,7 +85,7 @@
 .intro-image {
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     position: absolute;
 }
 
@@ -110,3 +110,14 @@
     100% { transform: scale(1,1)      translateY(0); }
 }
 
+@media screen and (max-width: 992px) {
+    .intro {
+        flex-direction: column;
+    }
+    .intro-left-wrapper {
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
