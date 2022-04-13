@@ -65,7 +65,7 @@ const mouseStyle = {
                     </p>
                 </div>
 
-                <img src={MouseIcon} style={{ ...mouseStyle, bottom: visible ? '50px' : '-500px' }} alt="" className="intro-scroll" />  
+                <img src={MouseIcon} style={{ ...mouseStyle, bottom: visible ? '0px' : '-500px' }} alt="" className="intro-scroll" />  
            
             </div>
             <div className="intro-right">

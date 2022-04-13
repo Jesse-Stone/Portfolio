@@ -26,7 +26,7 @@ const Navbar = () => {
     height: '60px',
     width: '40%',
     // backgroundColor: 'grey',
-    transition: 'top 0.6s',
+    transition: 'top 0.5s',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-around'
