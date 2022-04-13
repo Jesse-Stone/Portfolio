@@ -1,8 +1,36 @@
+import React, { useState, useEffect } from 'react';
 import "./Intro.css"
 import Jesse from "../../img/Jesse.png"
 import MouseIcon from "../../img/Mouse.svg"
+import { debounce } from '../../utilities/helpers'
 
 const Intro = () => {
+
+const [prevScrollPos, setPrevScrollPos] = useState(0);
+const [visible, setVisible] = useState(true);
+
+const handleScroll = debounce(() => {
+const currentScrollPos = window.pageYOffset;
+
+setVisible(currentScrollPos < 60);
+
+setPrevScrollPos(currentScrollPos);
+}, 100);
+
+useEffect(() => {
+window.addEventListener('scroll', handleScroll);
+
+return () => window.removeEventListener('scroll', handleScroll);
+
+}, [prevScrollPos, visible, handleScroll]);
+
+const mouseStyle = {
+    width: '40px',
+    height: '40px',
+    position: 'absolute',
+    bottom: '20px',
+    transition: 'bottom 1s',
+}
     return (
         <div className="intro">
             <div className="intro-left">
@@ -36,7 +64,9 @@ const Intro = () => {
                     
                     </p>
                 </div>
-                <img src={MouseIcon} alt="" className="intro-scroll" />                
+
+                <img src={MouseIcon} style={{ ...mouseStyle, bottom: visible ? '0px' : '-500px' }} alt="" className="intro-scroll" />  
+           
             </div>
             <div className="intro-right">
                 <div className="intro-bg"></div>

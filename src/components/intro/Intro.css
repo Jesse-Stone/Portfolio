@@ -16,7 +16,7 @@
 }
 
 .intro-left-wrapper {
-    padding: 50px;
+    padding: 15px;
     height: 40%;
     display: flex;
     flex-direction: column;
@@ -59,7 +59,7 @@
 
 .intro-title-item {
     height: 50px;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     color: rgb(18, 71, 124);
     display: flex;
@@ -89,12 +89,7 @@
     position: absolute;
 }
 
-.intro-scroll {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    bottom: 20px;
-}
+
 
 .intro-scroll {
     animation: bounce 2s ease infinite;
@@ -110,3 +105,10 @@
     100% { transform: scale(1,1)      translateY(0); }
 }
 
+@media (max-height:1100px), (max-width:1960px) {
+    .intro-left-wrapper {
+        height: 50%;
+        padding: 30px;
+        /* background-color: red; */
+    }
+}
