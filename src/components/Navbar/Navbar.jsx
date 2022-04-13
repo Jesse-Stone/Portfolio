@@ -21,17 +21,31 @@ const Navbar = () => {
   }, [prevScrollPos, visible, handleScroll]);
 
   const navbarStyles = {
+    main: {
     position: 'fixed',
     height: '60px',
-    width: '100%',
-    backgroundColor: 'grey',
-    textAlign: 'center',
-    transition: 'top 0.6s'
+    width: '40%',
+    // backgroundColor: 'grey',
+    transition: 'top 0.6s',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-around'
+    },
+
+    item: {
+      // backgroundColor: 'red',
+      fontSize: '1rem',
+      paddding: '5rem',
+      fontWeight: '200',
+    }
   }
 
   return (
-    <div style={{ ...navbarStyles, top: visible ? '0' : '-60px' }}>
-      <l>test</l>
+    <div style={{ ...navbarStyles.main, top: visible ? '0' : '-60px' }}>
+      <div style = {navbarStyles.item}>01. About Me</div> 
+      <div style = {navbarStyles.item}>02. Career</div> 
+      <div style = {navbarStyles.item}>03. Projects</div>
+      <div style = {navbarStyles.item}>04. Contact Me</div> 
     </div>
   );
 };
