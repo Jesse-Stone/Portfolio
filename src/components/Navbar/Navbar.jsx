@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <div style={{ ...navbarStyles, top: visible ? '0' : '-60px' }}>
-      Some Company Inc.
+      <l>test</l>
     </div>
   );
 };
