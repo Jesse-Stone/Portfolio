@@ -8,7 +8,7 @@ const Navbar = () => {
   const handleScroll = debounce(() => {
     const currentScrollPos = window.pageYOffset;
 
-    setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) || currentScrollPos < 10);
+    setVisible(currentScrollPos < 60);
 
     setPrevScrollPos(currentScrollPos);
   }, 100);
