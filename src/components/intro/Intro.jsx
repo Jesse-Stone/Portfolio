@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./Intro.css"
-import Jesse from "../../img/Jesse.png"
+import jesse5 from "../../img/jesse5.png"
 import MouseIcon from "../../img/Mouse.svg"
 import { debounce } from '../../utilities/helpers'
 
@@ -70,7 +70,7 @@ const mouseStyle = {
             </div>
             <div className="intro-right">
                 <div className="intro-bg"></div>
-                <img src={Jesse} alt="" className="intro-image" />
+                <img src={jesse5} alt="" className="intro-image" />
             </div>
         </div>
         
