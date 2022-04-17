@@ -3,9 +3,11 @@ import "./Intro.css"
 import jesse5 from "../../img/jesse5.png"
 import MouseIcon from "../../img/Mouse.svg"
 import { debounce } from '../../utilities/helpers'
+import '../../App.jsx'
+import {db, signInWithGoogle, logOut} from '../../firebase-config'
 
-
-const Intro = () => {
+const Intro = (user) => {
+    // console.log(user)
 
 const [prevScrollPos, setPrevScrollPos] = useState(0);
 const [visible, setVisible] = useState(true);
@@ -34,10 +36,12 @@ const mouseStyle = {
 }
     return (
         <div className="intro">
+
             <div className="intro-left">
                 <div className="intro-left-wrapper">
                     <h2 className="intro-intro">Hello, My name is</h2>
-                    <h1 className="intro-name">Jesse Stone</h1>
+                    {/* {user.user.displayName !== null && <h1 className='intro-name'> {'sup'}</h1>} */}
+                    {/* <h1 className="intro-name">{user !== null ? 'yo' : 'Please Log In'}</h1> */}
                     <div className="intro-title">
                         <div className="intro-title-wrapper">
                             <div className="intro-title-item">Web Developer</div>
@@ -64,14 +68,19 @@ const mouseStyle = {
                     power to destroy an entire planet.   
                     
                     </p>
+
                 </div>
 
                 <img src={MouseIcon} style={{ ...mouseStyle, bottom: visible ? '0px' : '-500px' }} alt="" className="intro-scroll" />  
            
             </div>
             <div className="intro-right">
-                <div className="intro-bg"></div>
-                <img src={jesse5} alt="" className="intro-image" />
+                {/* <div className="intro-bg"></div>
+                <img src={jesse5} alt="" className="intro-image" /> */}
+                                    <button onClick={signInWithGoogle}>Sign In</button>
+        <button onClick={logOut}>Log Out</button>
+        <img src={localStorage.getItem("profilePic")} alt="" />
+        <h2>{localStorage.getItem("name")}</h2>
             </div>
         </div>
         

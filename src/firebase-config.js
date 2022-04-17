@@ -1,4 +1,4 @@
-import { initializeApp } from "firebase/app"
+import { firebase, initializeApp } from "firebase/app"
 import { getFirestore } from '@firebase/firestore'
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth"
 
@@ -29,10 +29,12 @@ const signInWithGoogle = () => {
 };
 
 const logOut = () => {
-    // signOut(auth).then((result)=>{
-    //     console.log(result)
-    // })
-    app.auth().signOut()
+    signOut(auth).then(()=>{
+        localStorage.clear()
+        console.log('logged out')
+    }).catch((error)=>{
+        console.log('signed out')
+    })
 }
 
 export {db,auth, signInWithGoogle,logOut}
