@@ -4,6 +4,7 @@ import jesse5 from "../../img/jesse5.png"
 import MouseIcon from "../../img/Mouse.svg"
 import { debounce } from '../../utilities/helpers'
 
+
 const Intro = () => {
 
 const [prevScrollPos, setPrevScrollPos] = useState(0);
