@@ -27,14 +27,14 @@ const App = () => {
 
   return (
   <div>
-    {/* <Navbar/> */}
+    
     <Login/>
-    {user ? <Home user={user} /> : <Login/>}
+    {user ? <div><Navbar/><Home user={user} /> 
     <Intro user={user}/>
     <Auth/>
     <About/>
     <ProductList/>
-    <Contact/>
+    <Contact/> </div> : <>sup</>}  
   </div>
   )
 };
